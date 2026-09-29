@@ -1,0 +1,457 @@
+/* page layout */
+.container{
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto auto;
+    grid-template-areas: 
+        "sidebar main main"
+    ;
+    width: fit-content;
+
+}
+
+div{
+    background-color: #F2F2F2;
+    border: 2px solid black;
+    margin: 10px;
+    padding: 40px;
+    text-align:center;
+}
+/* part 4 heading */
+.heading{
+
+    /*display and flex properties*/
+    display: inline-flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    /*size of the block*/
+    height: 100px;
+    width: 300px;
+    /*position*/
+    position: fixed;
+    /*mardin and padding*/
+    margin-top: 20px;
+    padding: 10px;
+    /*font size and bg-c*/
+    font-size: smaller;
+    background-color: #689D4B;
+    z-index: 1;
+}
+
+h1{
+    margin: 0px;
+}
+.sidebar{
+    grid-area: sidebar;
+    background-color: #b0e295;
+    
+}
+.sidebar{
+    position: sticky;
+    top: 232px;
+    height: 800px;
+
+}
+
+.maincontent{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    grid-area: main;
+    background-color: #b7d691;
+    padding:10px;
+    margin-bottom: 180px;
+}
+
+/*part 4 footer*/
+.footer{
+
+    /*inline flex display*/
+    display: inline-flex;
+    justify-content: center;
+    flex-shrink: 0;
+    /*position*/
+    position: fixed;
+    bottom: 0;
+    right: 50px;
+    /*properties*/
+    width: 700px;
+    height: fit-content;
+    font-size: medium;
+    background-color: #689D4B;
+    margin: 10px;
+}
+
+
+/* side bar organization */
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: flex-start;
+}
+/*adding flex to the nav bar*/
+nav{
+    /*display flex and flex properties*/
+    display:flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-around;
+}
+nav > *{
+    flex-grow: 1;
+}
+a{
+    text-decoration: none;
+    color: #6a1cfa;
+}
+
+/* tables in education and experience  */
+tr
+{
+    background-color: #689D4B;
+    color: rgb(251, 253, 252);
+}
+td
+{
+    padding: 20px;
+}
+#tables
+{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: large;
+}
+
+html{
+    background-color:#D96868;
+}
+/* summary */
+#summary
+{
+    display: flex;
+    border: none;
+    background-color: #b7d691;
+    flex-direction: rows;
+    justify-content: center;
+}
+
+
+
+.summary_element
+{
+    background-color: #D96868;
+    text-align: center;
+}
+/*skills*/
+/*making the skills section a grid*/
+.skill
+{
+    /*display skills as a gris*/
+    display: grid;
+    border: 0px;
+    background-color: #b7d691;
+    grid-template-columns: repeat(3, auto);
+    grid-row: repeat(2,auto);
+    align-items: center;
+}
+#softskill{
+    /*span over two columns*/
+    grid-column:span 2;
+}
+#mediums{
+    /*span over two columns*/
+    grid-column:span 2;
+}
+#software{
+    /*span over two rows*/
+    grid-row: span 2;
+}
+
+/*decorating list elements*/
+.list
+{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    background-color: #689D4B;
+    color:white;
+    padding: 20px;
+
+    transition: background-color 3s ease-in,
+        font-size 2s ease-in-out,
+        transform 5s;
+} 
+
+.list:hover{
+    font-size: larger;
+    background-color: #D96868;
+    transform: scale(1.2) rotate(3deg);
+}
+
+/* project grid*/
+.project
+{
+    /*display the project as a grid*/
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 1fr 2fr;
+    /*other properties*/
+    border: none;
+    background-color: #b7d691;
+    padding:0px;
+    color: white;
+
+}
+
+.description
+{
+    /*start and span*/
+    grid-row-start: 2;
+    grid-column: span 2;
+    /*inside display of flex*/
+    display: flex;
+    /*set to grow and to shrink*/
+    flex-shrink: 1;
+    flex-grow: 1;
+    align-items: center;
+    justify-content:center;
+    /*other properties*/
+    padding: 0px;
+    background-color:#D96868 ;
+    
+}
+
+.project_title
+{
+    /*span over two columns*/
+    grid-column: span 2;
+    /*display of flex*/
+    display: flex;
+    /*flex shrink and other properties*/
+    flex-shrink: 1;
+    align-items: center;
+    justify-content:center;
+    padding:0px;
+    background-color:#D96868;
+}
+.pictures
+{
+    /*span overtwo rows*/
+    grid-row:span 2;
+    /*display of flex and flex wrap*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /*other properties*/
+    padding: 0px;
+    background-color:#D96868;
+}
+/*decorating pictures*/
+
+img{
+    float: right;
+    transition: opacity 3s,
+        transform 3s;
+
+}
+img:hover{
+    opacity: 90%;
+    transform: scale(1.5);
+}
+
+
+/* resume sevction */
+#resume
+{
+    border-radius: 40px;
+    background-color: #D96868;
+    
+}
+/*decorating download*/
+.download
+{
+    background-color: #4b9d4e;
+    border-radius: 5%;
+    padding: 10px;
+    transition: box-shadow 2s, background-color 3s; 
+}
+.download:hover{
+    color:rgb(44, 37, 37);
+    box-shadow: 5px 5px darkblue;
+    background-color: #f1ec70;
+}
+
+/*media section */
+/*phone screen*/
+@media (max-width: 480px){
+    .container{
+        display: grid;
+        grid-template-rows: auto auto auto;
+        grid-template-columns: auto;
+        grid-template-areas: 
+            "header"
+            "sidebar"
+            "main"
+            "footer"
+        ;
+        width: fit-content;
+
+    }
+    .heading{
+        width: 100px;
+        height: fit-content;
+    }
+
+
+    .project    
+    {
+        display: grid;
+        grid-template-areas:
+        "title"
+        "description"
+        "pictures";
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+        scale:.9;
+
+    }
+
+    .maincontent{
+        margin-top: 10px;
+    }
+    .sidebar{
+        flex-direction: row;
+        align-items: center;
+        font-size: small;
+        margin-bottom:  0px;
+        height: fit-content;
+        position: static;
+    }
+    #resume{
+        font-size: small;
+    }
+    nav:hover{
+        font-size: large;
+    }
+
+    div{
+        margin: 2px;
+        padding: 10px;
+    }
+    #summary
+    {
+        display: flex;
+        background-color: #b7d691;
+        flex-direction: column;
+    }
+    footer{
+        right: 0px;
+        width:400px;
+    }
+
+
+  
+
+}
+/*tablet */
+@media (min-width: 481px) and (max-width: 768px){
+    .container{
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns:auto  ;
+    grid-template-areas: 
+        "header"
+        "sidebar"
+        "main"
+        "footer"
+    ;
+    width: fit-content;
+    font-size: larger;
+
+    }
+
+    .heading{
+        width: 130px;
+        height: fit-content;
+    }
+    .project    
+    {
+        display: grid;
+        grid-template-areas:
+        "title"
+        "description"
+        "pictures";
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto;
+        transform:scale(.9);
+
+    }
+    div, table{
+        font-size: medium;
+    }
+
+
+    .sidebar{
+        flex-direction: row;
+        align-items: center;
+        position: static;
+        height: fit-content;
+        font-size: small;
+        margin-bottom: 0px;
+
+    }
+
+    nav:hover{
+        font-size: large;
+    }
+
+
+    div{
+        margin: 2px;
+        padding: 10px;
+    }
+    #summary
+    {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #b7d691;
+        flex-direction:column;
+    }
+    .summary_element
+    {
+        display: flex;
+        justify-content: center;
+        flex-wrap:wrap;
+    }
+     .maincontent{
+        margin-top: 10px;
+    }
+    .footer{
+        right:0;
+        width: 480px;
+    }
+
+}
+/*laptop*/
+@media (min-width: 769px) and (max-width: 1024px){
+    .container{
+        width: fit-content;
+
+    }
+    .project{
+        display:inline-block;
+
+    }
+    #summary
+    {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #b7d691;
+        flex-direction:column;
+    }
+
+
+    
+}
